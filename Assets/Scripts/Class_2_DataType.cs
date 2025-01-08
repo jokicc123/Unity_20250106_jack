@@ -20,4 +20,16 @@ public class Class_2_DataType :MonoBehaviour
     public string character = "蓋倫";
     public bool isDead = false;    //是否死亡: 否
     public bool gameOver = true;   //是否死亡: 是
+    //整數資料類型
+    public byte lv = 16;            //byte型別 ， 範圍 0~255，大小 8byte
+    public uint coin = 9999;        //uint型別 ， 範圍 0~4****，大小 32byte
+    public long items = 3000;       //long型別 ， 範圍 0~92****，大小 64byte
+
+    // 字串與字元
+    public string PlayerName = "KID"; //字串: 儲存多個字元，使用雙引號
+    public char a = 'a';              //字串: 儲存一個字元，使用單引號 
+
+
+    //溢位
+    //public sbyte nuber =128;       //溢位導致錯誤，會出現紅色蚯蚓
 }
