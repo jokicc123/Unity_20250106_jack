@@ -10,6 +10,6 @@ public class Class_3_practice : MonoBehaviour
         //或全部省略
         //1或9
         int answer = 6 / 2 * (1 + 2);
-        Debug.Log($"<color=#f93 6/2 *(1+2)= {answer}</colpr>");
+        Debug.Log($"<color=#f93 6/2 *(1+2)= {answer}</color>");
     }
 }
