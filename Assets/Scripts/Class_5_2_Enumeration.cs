@@ -52,4 +52,8 @@ public class Class_5_2_Enumeration : MonoBehaviour
     {
         Debug.Log ((int)item);
     }
+    //¦CÁ|»P§PÂ_¦¡Switch
+    //switch+Tab *
+
+
 }
