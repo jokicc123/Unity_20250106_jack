@@ -1,51 +1,63 @@
-using Unity.VisualScripting;
+ï»¿using Unity.VisualScripting;
 using UnityEngine;
 namespace chang
 {   /// <summary>
-    /// ¤ÏÂĞ¹Bºâ³¯­z¦¡:°j°é
-    /// for¡Bforeach¡Bdo¡Bwhile
+    /// åè¦†é‹ç®—é™³è¿°å¼:è¿´åœˆ
+    /// forã€foreachã€doã€while
     /// </summary>
     public class Class_6_1_Iteration : MonoBehaviour
     {
         private void Awake()
         {
+            #region whileï¼Œdoï¼Œforè¿´åœˆ
 
-            //°j°é½Ğ¦b¤@¦¸©Ê¨Æ¥ó¤º¨Ï¥Î Awake¡BStart
-            //while°j°é:·í¥¬ªL­È¬°true®É·|«ùÄò°õ¦æ
-            //while(¥¬ªL­È) {µ{¦¡°Ï¶ô}
-            //µL­­°j°é:¥¬ªL­È¤@ª½¬Otrue
-            //«Å§i°Ï°ìÅÜ¼Æ¬°i¬°0
+            //è¿´åœˆè«‹åœ¨ä¸€æ¬¡æ€§äº‹ä»¶å…§ä½¿ç”¨ Awakeã€Start
+            //whileè¿´åœˆ:ç•¶å¸ƒæ—å€¼ç‚ºtrueæ™‚æœƒæŒçºŒåŸ·è¡Œ
+            //while(å¸ƒæ—å€¼) {ç¨‹å¼å€å¡Š}
+            //ç„¡é™è¿´åœˆ:å¸ƒæ—å€¼ä¸€ç›´æ˜¯true
+            //å®£å‘Šå€åŸŸè®Šæ•¸ç‚ºiç‚º0
             int i = 0;
-            i = 5;  //´ú¸Õwhile»Pdoªº®t²§
-            //·íi<5´N°õ¦æ{}
+            i = 5;  //æ¸¬è©¦whileèˆ‡doçš„å·®ç•°
+            //ç•¶i<5å°±åŸ·è¡Œ{}
             while (i < 5)
             {
-                Debug.Log($"<color=#f33>while°j°é¡Ai:{i}</color>");
-                // i»¼¼W(i+1)
+                Debug.Log($"<color=#f33>whileè¿´åœˆï¼Œi:{i}</color>");
+                // iéå¢(i+1)
                 i++;
             }
-            // do°j°é:
-            //do{µ{¦¡°Ï¶ô}while(¥¬ªL­È)
+            // doè¿´åœˆ:
+            //do{ç¨‹å¼å€å¡Š}while(å¸ƒæ—å€¼)
             int j = 0;
-            j = 5;    //´ú¸Õwhile»Pdoªº®t²§
+            j = 5;    //æ¸¬è©¦whileèˆ‡doçš„å·®ç•°
             do
             {
-                Debug.Log($"<color=#f79>do °j°é¡Aj:{j}</color>");
+                Debug.Log($"<color=#f79>do è¿´åœˆï¼Œj:{j}</color>");
                 j++;
 
             }
             while (j < 5);
-            // for °j°é:
-            // for (ªì©l­È¡A¥¬ªL­È;­¡¥N¾¹){µ{¦¡°Ï¶ô}
+            // for è¿´åœˆ:
+            // for (åˆå§‹å€¼ï¼Œå¸ƒæ—å€¼;è¿­ä»£å™¨){ç¨‹å¼å€å¡Š}
             for (int k = 0; k < 5; k++)
             {
 
-                Debug.Log($"<color=#f78>for °j°é¡Ak:{k}</color>");
+                Debug.Log($"<color=#f78>for è¿´åœˆï¼Œk:{k}</color>");
 
             }
+            #endregion
+            // foreachè¿´åœˆ
+            // è³‡æ–™çµæ§‹:é™£åˆ—ã€æ¸…å–®ç­‰ç­‰...
+            //foreach(è³‡æ–™é¡å‹ è³‡æ–™åç¨± in è³‡æ–™çµæ§‹) {ç¨‹å¼å€å¡Š}
+            string dialogue = "å—¨ï¼Œä½ å¥½ï¼Œæˆ‘æ˜¯npc~";
 
-        } 
+            foreach (var text in dialogue)
+            {
 
+                Debug.Log($"<color=#f63>{text}</color>");
+            }
+
+        }
+       
      }
 
 

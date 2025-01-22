@@ -1,39 +1,39 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 
 public class Class_5_2_Enumeration : MonoBehaviour
 {
-    #region »{ÃÑ¦CÁ|ªº°ò¥»¥Îªk
-    //¦CÁ|:©w¸q¤U©Ô¿ï³æªº¿ï¶µ()³q±`³£¬O³æ¿ï)
-    //»yªk
-    //­×¹¢µü ÃöÁä¦r enum¦CÁ|¦WºÙ{¦CÁ|¿ï¶µ}
-    //©w¸q¤@­Ó¦CÁ|¡A¦WºÙ¥s°µ©u¸`
+    #region èªè­˜åˆ—èˆ‰çš„åŸºæœ¬ç”¨æ³•
+    //åˆ—èˆ‰:å®šç¾©ä¸‹æ‹‰é¸å–®çš„é¸é …()é€šå¸¸éƒ½æ˜¯å–®é¸)
+    //èªæ³•
+    //ä¿®é£¾è© é—œéµå­— enumåˆ—èˆ‰åç¨±{åˆ—èˆ‰é¸é …}
+    //å®šç¾©ä¸€å€‹åˆ—èˆ‰ï¼Œåç¨±å«åšå­£ç¯€
     private enum Season
     {
-        //©w¸q¦CÁ|¿ï¶µ
+        //å®šç¾©åˆ—èˆ‰é¸é …
         Spring, Summer, Autumn, Winter
     }
 
-    //«Å§iÅÜ¼Æ¡AÃş¦æ¬°©u¸`¦CÁ|¡A¹w³]­È¬°®L¤Ñ
-    [SerializeField, Header("©u¸`")]
+    //å®£å‘Šè®Šæ•¸ï¼Œé¡è¡Œç‚ºå­£ç¯€åˆ—èˆ‰ï¼Œé è¨­å€¼ç‚ºå¤å¤©
+    [SerializeField, Header("å­£ç¯€")]
     private Season season = Season.Summer;
 
     private void Awake()
     {
-        //¨ú±o¦CÁ|ªº­È(Get)§ì¥X­È
+        //å–å¾—åˆ—èˆ‰çš„å€¼(Get)æŠ“å‡ºå€¼
         Debug.Log(season);
-        //¨ú±o¦CÁ|¼Æªº­È
+        //å–å¾—åˆ—èˆ‰æ•¸çš„å€¼
         Debug.Log((int)season);
-        //¨ú±o¦CÁ|ªº­È(Set)­×§ï­È
+        //å–å¾—åˆ—èˆ‰çš„å€¼(Set)ä¿®æ”¹å€¼
         season = Season.Winter;
         Debug.Log(season);
-        //³z¹L¼Æ­È³]©w¦CÁ|
+        //é€éæ•¸å€¼è¨­å®šåˆ—èˆ‰
         season = (Season)2;
         Debug.Log(season);
     }
     #endregion
-    //©w¸q¦CÁ|ªº¼Æ­È
+    //å®šç¾©åˆ—èˆ‰çš„æ•¸å€¼
     /// <summary>
-    /// ¹D¨ã
+    /// é“å…·
     /// </summary>
     private enum Item 
     { 
@@ -43,16 +43,16 @@ public class Class_5_2_Enumeration : MonoBehaviour
 
 
 
-    [SerializeField,Header("¹D¨ã")]
+    [SerializeField,Header("é“å…·")]
     private Item item = Item.Chinken;
 
-    //°õ¦æ¶¶§Ç:Awake>Start>Update
-    //¶}©l¨Æ¥ó:¦b³ê¿ô¨Æ¥ó«á°õ¦æ¤@¦¸(ªì©l¤Æ)
+    //åŸ·è¡Œé †åº:Awake>Start>Update
+    //é–‹å§‹äº‹ä»¶:åœ¨å–šé†’äº‹ä»¶å¾ŒåŸ·è¡Œä¸€æ¬¡(åˆå§‹åŒ–)
     private void Start()
     {
         Debug.Log ((int)item);
     }
-    //¦CÁ|»P§PÂ_¦¡Switch
+    //åˆ—èˆ‰èˆ‡åˆ¤æ–·å¼Switch
     //switch+Tab *
 
 

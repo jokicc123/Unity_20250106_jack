@@ -1,111 +1,111 @@
-using Unity.VisualScripting;
+ï»¿using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SocialPlatforms.Impl;
 
-//©R¦WªÅ¶¡:
-//±NÃş§O¤ÀÃş¡AÃş¦ü­Ü®wªº·§©À¡C¤£¦P­Ü®w¥i¥H¦³¬Û¦P¦WºÙÃş§O¡C
-//»yªk:namespace ©R¦WªÅ¶¡¦WºÙ{¤º®e}
+//å‘½åç©ºé–“:
+//å°‡é¡åˆ¥åˆ†é¡ï¼Œé¡ä¼¼å€‰åº«çš„æ¦‚å¿µã€‚ä¸åŒå€‰åº«å¯ä»¥æœ‰ç›¸åŒåç¨±é¡åˆ¥ã€‚
+//èªæ³•:namespace å‘½åç©ºé–“åç¨±{å…§å®¹}
 namespace chang
 {
     /// <summary>
-    /// ¿ï¨ú³¯­z¦¡ Selection statement
-    /// 1.if§PÂ_¦¡
-    /// 2.Switch§PÂ_¦¡
+    /// é¸å–é™³è¿°å¼ Selection statement
+    /// 1.ifåˆ¤æ–·å¼
+    /// 2.Switchåˆ¤æ–·å¼
     /// </summary>
     public class Class_5_1_Selection : MonoBehaviour
 
     {
-        [SerializeField, Header("¬O§_¶}ªù")]
+        [SerializeField, Header("æ˜¯å¦é–‹é–€")]
         private bool isOpen;
-        [SerializeField, Header("¤À¼Æ"), Range(0, 100)]
+        [SerializeField, Header("åˆ†æ•¸"), Range(0, 100)]
         private int score = 100;
-        [SerializeField, Header("¦å¶q"), Range(0, 100)]
+        [SerializeField, Header("è¡€é‡"), Range(0, 100)]
         private int hp = 100;
-        [SerializeField, Header("ªZ¾¹")]
+        [SerializeField, Header("æ­¦å™¨")]
         private string weapon;
         private void Awake()
         {
-            //if§PÂ_¦¡
-            //if(¥¬ªL­È){³¯­z¦¡}
+            //ifåˆ¤æ–·å¼
+            //if(å¸ƒæ—å€¼){é™³è¿°å¼}
             if (true)
             {
-                Debug.Log("·í¥¬ªL­È¬° True·|°õ¦æ³o¸Ì");
+                Debug.Log("ç•¶å¸ƒæ—å€¼ç‚º TrueæœƒåŸ·è¡Œé€™è£¡");
             }
-            //§Ö³t§¹¦¨:¿é¤Jif¿ï¨úif³¯­z¦¡«öEnter©ÎTab
+            //å¿«é€Ÿå®Œæˆ:è¼¸å…¥ifé¸å–ifé™³è¿°å¼æŒ‰Enteræˆ–Tab
             // if (false)
             // {
-            //     Debug.Log("2·í¥¬ªL­È¬° Flase ¤£·|°õ¦æ³o¸Ì¦Ó¥B·|¦³ºñ³L°C");
+            //     Debug.Log("2ç•¶å¸ƒæ—å€¼ç‚º Flase ä¸æœƒåŸ·è¡Œé€™è£¡è€Œä¸”æœƒæœ‰ç¶ èš¯èš“");
             //  }
 
         }
 
 
-        //§ó·s¨Æ¥ó:¤@¬íÄÁ°õ¦æ¬ù60¦¸(60FPS)Frame Per Second
+        //æ›´æ–°äº‹ä»¶:ä¸€ç§’é˜åŸ·è¡Œç´„60æ¬¡(60FPS)Frame Per Second
         private void Update()
         {
-            //±`¥Î§Ö±¶Áä
-            //1.®æ¦¡¤Æ(±Æª© ctrl + +k d
-            //2.µ{¦¡½X¤ù¬q Ctrl + k s
+            //å¸¸ç”¨å¿«æ·éµ
+            //1.æ ¼å¼åŒ–(æ’ç‰ˆ ctrl + +k d
+            //2.ç¨‹å¼ç¢¼ç‰‡æ®µ Ctrl + k s
 
-            #region §PÂ_¦¡if
-            Debug.Log("<color=#f79>§ó·s¨Æ¥ó</color>");
-            //¦pªGis Open ¥¬ªL­Èµ¥©óTrue  ¤w¸g¶}ªù¡A´NÅã¥Ü¤w¸g¶}ªù
+            #region åˆ¤æ–·å¼if
+            Debug.Log("<color=#f79>æ›´æ–°äº‹ä»¶</color>");
+            //å¦‚æœis Open å¸ƒæ—å€¼ç­‰æ–¼True  å·²ç¶“é–‹é–€ï¼Œå°±é¡¯ç¤ºå·²ç¶“é–‹é–€
             if (isOpen)
             {
-                Debug.Log("<color=#f93>¤w¸g¶}ªù</color>");
+                Debug.Log("<color=#f93>å·²ç¶“é–‹é–€</color>");
             }
-            //§_«his Open ¥¬ªL­Èµ¥©óFalse¡A´NÅã¥ÜªùÃö¤F
+            //å¦å‰‡is Open å¸ƒæ—å€¼ç­‰æ–¼Falseï¼Œå°±é¡¯ç¤ºé–€é—œäº†
             else
             {
-                Debug.Log("<color=#f93>ªùÃö¤F</color>");
+                Debug.Log("<color=#f93>é–€é—œäº†</color>");
             }
-            //¤ñ¸û¹Bºâ¤l¡AÅŞ¿è¹Bºâ¤lµ²ªG¬°¥¬ªL­È
-            //¦pªG ¤À¼Æ>=60´N³q¹L
+            //æ¯”è¼ƒé‹ç®—å­ï¼Œé‚è¼¯é‹ç®—å­çµæœç‚ºå¸ƒæ—å€¼
+            //å¦‚æœ åˆ†æ•¸>=60å°±é€šé
             if (score >= 60)
             {
-                Debug.Log("<color=#3f3>®¥³ß§Aªºc#½Òµ{¹L¤F</color>");
+                Debug.Log("<color=#3f3>æ­å–œä½ çš„c#èª²ç¨‹éäº†</color>");
             }
-            //§_«h ¦pªG¤À¼Æ>=40 ¥i¥H¸É¦Ò
+            //å¦å‰‡ å¦‚æœåˆ†æ•¸>=40 å¯ä»¥è£œè€ƒ
             else if (score >= 40)
             {
-                Debug.Log("<color=#f33>§A¥i¥H¸É¦Ò¤F</color>");
+                Debug.Log("<color=#f33>ä½ å¯ä»¥è£œè€ƒäº†</color>");
             }
-            //§_«h ¦pªG¤À¼Æ>=20 ¥i¥H¸É¦Ò¦ı­n»s§@¤p±MÃD
+            //å¦å‰‡ å¦‚æœåˆ†æ•¸>=20 å¯ä»¥è£œè€ƒä½†è¦è£½ä½œå°å°ˆé¡Œ
             else if (score >= 20)
             {
-                Debug.Log("<color=#f33>¥i¥H¸É¦Ò¦ı­n°µ¤@­ÓC#¤p±MÃD¤F</color>");
+                Debug.Log("<color=#f33>å¯ä»¥è£œè€ƒä½†è¦åšä¸€å€‹C#å°å°ˆé¡Œäº†</color>");
             }
-            //§_«h·í±¼
+            //å¦å‰‡ç•¶æ‰
             else
             {
-                Debug.Log("<color=#f33>§Aªºc#½Òµ{³Q·í¤F</color>");
+                Debug.Log("<color=#f33>ä½ çš„c#èª²ç¨‹è¢«ç•¶äº†</color>");
             }
             #endregion
-            #region §PÂ_¦¡
-            //switch §PÂ_¦¡
-            //switch(­n§PÂ_ªº­È){³¯­z¦¡}
-            //§Ö³t§¹¦¨:Switch + Tab *2
+            #region åˆ¤æ–·å¼
+            //switch åˆ¤æ–·å¼
+            //switch(è¦åˆ¤æ–·çš„å€¼){é™³è¿°å¼}
+            //å¿«é€Ÿå®Œæˆ:Switch + Tab *2
             switch (weapon)
             {
-                //case­È:
-                //·í§PÂ_ªº­Èµ¥©ó­È®É´«°õ¦æ³o¸Ì
-                //break:¸õ¥X§PÂ_¦¡
-                //¦pªGªZ¾¹µ¥©ó¤p¤M¡A§ğÀ»¤Oµ¥©ó20
-                //½¹½º¤M¸ò¤p¤M¤@¼Ë
-                case "½¹½º¤M":
-                case "¤p¤M":
-                    Debug.Log("<color=#f93>§ğÀ»¤O:20</color>");
+                //caseå€¼:
+                //ç•¶åˆ¤æ–·çš„å€¼ç­‰æ–¼å€¼æ™‚æ›åŸ·è¡Œé€™è£¡
+                //break:è·³å‡ºåˆ¤æ–·å¼
+                //å¦‚æœæ­¦å™¨ç­‰æ–¼å°åˆ€ï¼Œæ”»æ“ŠåŠ›ç­‰æ–¼20
+                //è´è¶åˆ€è·Ÿå°åˆ€ä¸€æ¨£
+                case "è´è¶åˆ€":
+                case "å°åˆ€":
+                    Debug.Log("<color=#f93>æ”»æ“ŠåŠ›:20</color>");
                     break;
-                case "ºhåÑ":
-                    Debug.Log("<color=#f93>§ğÀ»¤O:999</color>");
+                case "æ¦´æ§¤":
+                    Debug.Log("<color=#f93>æ”»æ“ŠåŠ›:999</color>");
                     break;
-                case "­»¿¼":
-                    Debug.Log("<color=#f93>§ğÀ»¤O:10</color>");
+                case "é¦™è•‰":
+                    Debug.Log("<color=#f93>æ”»æ“ŠåŠ›:10</color>");
                     break;
 
-                //·íweapon ªº­È¤£µ¥©ó¤W­±ªº©Ò¦³­È°õ¦æ³o¸Ì
+                //ç•¶weapon çš„å€¼ä¸ç­‰æ–¼ä¸Šé¢çš„æ‰€æœ‰å€¼åŸ·è¡Œé€™è£¡
                 default:
-                    Debug.Log("<color=#f93³o¤£¬O¯à¥ÎªºªZ¾¹</color>");
+                    Debug.Log("<color=#f93é€™ä¸æ˜¯èƒ½ç”¨çš„æ­¦å™¨</color>");
                     break;
 
             }
@@ -116,47 +116,47 @@ namespace chang
 
             if (hp >= 10)
             {
-                Debug.Log("<color=#3f3>§Ö¦º±¼¤F</color>");
+                Debug.Log("<color=#3f3>å¿«æ­»æ‰äº†</color>");
 
             }
             else if (hp >= 40)
             {
-                Debug.Log("<color=#3f3>Äµ§i§Ö³Ü¤ô</color>");
+                Debug.Log("<color=#3f3>è­¦å‘Šå¿«å–æ°´</color>");
             }
             else if (hp >= 60)
             {
-                Debug.Log("<color=#3f3>°·±dª¬ªp¥X°İÃD</color>");
+                Debug.Log("<color=#3f3>å¥åº·ç‹€æ³å‡ºå•é¡Œ</color>");
             }
             else if (hp >= 80)
             {
-                Debug.Log("<color=#3f3>¦å¶q¦w¥ş</color>");
+                Debug.Log("<color=#3f3>è¡€é‡å®‰å…¨</color>");
             }
             else if (hp == 0)
             {
-                Debug.Log("<color=#3f3>§A¤w¸g¦º¤F</color>");
+                Debug.Log("<color=#3f3>ä½ å·²ç¶“æ­»äº†</color>");
             }
 
 
             if (hp >= 80)
             {
-                Debug.Log("<color=#3f3>§Ö¦º±¼¤F</color>");
+                Debug.Log("<color=#3f3>å¿«æ­»æ‰äº†</color>");
 
             }
             else if (hp >= 60)
             {
-                Debug.Log("<color=#3f3>Äµ§i§Ö³Ü¤ô</color>");
+                Debug.Log("<color=#3f3>è­¦å‘Šå¿«å–æ°´</color>");
             }
             else if (hp >=40)
             {
-                Debug.Log("<color=#3f3>°·±dª¬ªp¥X°İÃD</color>");
+                Debug.Log("<color=#3f3>å¥åº·ç‹€æ³å‡ºå•é¡Œ</color>");
             }
             else if (hp >=10)
             {
-                Debug.Log("<color=#3f3>¦å¶q¦w¥ş</color>");
+                Debug.Log("<color=#3f3>è¡€é‡å®‰å…¨</color>");
             }
             else if (hp == 0)
             {
-                Debug.Log("<color=#3f3>§A¤w¸g¦º¤F</color>");
+                Debug.Log("<color=#3f3>ä½ å·²ç¶“æ­»äº†</color>");
             }
         }
 
