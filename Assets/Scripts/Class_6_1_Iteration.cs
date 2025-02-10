@@ -48,7 +48,10 @@ namespace chang
             // foreach迴圈
             // 資料結構:陣列、清單等等...
             //foreach(資料類型 資料名稱 in 資料結構) {程式區塊}
+            //字串就是一種資料結構，用來存放 char的陣列
             string dialogue = "嗨，你好，我是npc~";
+            //foreach迴圈將抓出 dialogue的每一個字並存放在區域變數
+            //Var無類型
 
             foreach (var text in dialogue)
             {
