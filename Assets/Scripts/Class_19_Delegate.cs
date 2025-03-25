@@ -1,4 +1,5 @@
 ﻿using chang;
+using System;
 using UnityEngine;
 
 namespace Chang.Class_19
@@ -89,6 +90,20 @@ namespace Chang.Class_19
         private DelegatCombine<float> delegatCombineFloat;
         private DelegatCombine<int> delegatCombineInt;
 
+        //Func
+        //可以存放有傳回並且有0個參數以上的方法
+        //宣告一個委派，有一個參數float，並且傳回值為float
+        //<參數，傳回值>
+        private Func<float, float> funcCalc;
+
+        //Action
+        //可以存放無傳回並且有0個參數以上的方法
+        //宣告一個委派，沒有參數也沒也傳回值
+        private Action actionMetohd;
+        //Predicate
+        //可以存放有傳回並且有1個參數的方法
+        //宣告一個委派，有一個參數float，並且傳回值為bool
+        private Predicate<float>predicate; 
 
         //4. 呼叫委派
 
@@ -102,18 +117,68 @@ namespace Chang.Class_19
             delegateMehod();        //呼叫委派 
             #endregion
 
+            #region   多撥委派與泛型委派
             calculate += Add;
             calculate -= Sub;
             calculate += Mul;
-            calculate (10,3);
-            calculate (100,70);
+            calculate(10, 3);
+            calculate(100, 70);
 
             CalcuteNumber(Sub, 3, 7);
             delegatCombineFloat = Combine<float>;
             delegatCombineFloat(3.5f);
             delegatCombineInt = Combine<int>;
             delegatCombineInt(999);
+            #endregion
+            #region  匿名方法
+            //匿名方法
+            //delegte(參數){陳述式}
+            DelegateMehod anonymousMethod = delegate () { };
+            Calculate anonymousCalc = delegate (float a, float b) { return a * b; };
+            //簡寫方法
+            DelegateMehod anonymousMethod2 = () => { };
+            Calculate anonymousCalc2 = (a, b) => { return a * b; };
+
+            CalcuteNumber(Add, 3, 7);
+            CalcuteNumber(anonymousCalc, 3, 7);
+            CalcuteNumber(anonymousCalc2, 3, 7);
+            //在參數上面使用匿名方法
+            CalcuteNumber(delegate (float a, float b) { return a / b; }, 9, 3);
+            CalcuteNumber((a, b) => { return a / b; }, 9, 3);
+
+            #endregion
+
+
+            funcCalc = delegate (float x) { return x * 10; };
+            LogSystem.LogwithColor($"Func委派{ funcCalc(3.5f)}", "#f33");
+
+
+            actionMetohd = delegate () { LogSystem.LogwithColor("Action委派", "#f33"); };
+            actionMetohd();
+
+            predicate = delegate (float x) { return x > 0; };
+            LogSystem.LogwithColor($"Predicate委派:是否大於零 ={predicate(7)}", "#f33");
+
+            //Lambda 運算子 =>
+            //(參數)=>{陳述式}
+
+            Action action = () => { LogSystem.LogwithColor("Lanbda 練習", "#ff3"); } ;
+            action();
+
+
+            Func<int, string> func = (x) => { return $"Lambda練習，數字:{x}"; };
+            LogSystem.LogwithColor(func(77), "#ff3");
+
+            Predicate<string> predicateTest = (x) => { return x.Length > 0; };
+            LogSystem.LogwithColor($"{predicateTest("KID")}", "#ff3");
+
+
+
+
+
         }
+
+
         //委派:'將方法當作參數
         private void CalcuteNumber(Calculate calculate, float a, float b)
         {
